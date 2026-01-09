@@ -10,3 +10,173 @@
       background-color: rgb(222, 11, 241);
 
     }
+
+
+
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 19px; 
+  line-height: 1.8; 
+  background-color: #000000;
+  color: #000000;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "facts"
+    "footer";
+  gap: 10px;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #000000, #8e24aa);
+  text-align: center;
+  color: #000000;
+  padding: 1.5rem 0;
+}
+
+.header h1 {
+  font-size: 2.6rem;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: #8e24aa;
+  border-radius: 8px;
+}
+
+.menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menu li {
+  padding: 14px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.2rem; 
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #e0f7fa;
+}
+
+.content {
+  grid-area: main;
+  background-color: #e9cced;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  color: #6a1b9a;
+  font-size: 2rem;
+  margin-bottom: 0.6em;
+}
+
+
+.content p,
+.content li,
+.facts li {
+  font-size: 2.2rem; /* was smaller before */
+  margin-bottom: 0.8em;
+}
+
+.facts {
+  grid-area: facts;
+  background-color: #880aa7;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #000000;
+  font-size: 2.2rem; 
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8e24aa;
+  color: white;
+  background-color: #880aa7;
+  color: rgb(0, 0, 0);
+
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 2.1rem; 
+}
+
+.footer img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  width: 80%; /* ⬆️ Larger image, scaled responsively */
+  max-width: 800px; 
+  height: auto;
+}
+
+/* Banner Animation */
+.banner {
+  text-align: center;
+  background-color: #e9cced;
+  padding: 14px;
+  font-size: 3.3rem; /* Slightly bigger text */
+  animation: floatText 8s linear infinite;
+}
+
+@keyframes floatText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "menu main facts"
+      "footer footer footer";
+  }
+
+  body {
+    font-size: 30px;
+  }
+
+  .header h1 {
+    font-size: 3.8rem;
+  }
+
+  .content h2 {
+    font-size: 2.4rem;
+  }
+
+  .content p,
+  .content li,
+  .facts li {
+    font-size: 2rem;
+  }
+}
+
+.menu a.active {
+  background-color: #000000;
+  border-radius: 6px;
+  color: #fff;
+}
