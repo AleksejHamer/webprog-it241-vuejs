@@ -1,3 +1,4 @@
+<template>
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,3 +103,7 @@
 
 </body>
 </html>
+</template>
+
+<script></school>
+<script></school>
