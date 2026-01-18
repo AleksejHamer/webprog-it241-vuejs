@@ -105,5 +105,5 @@
 </html>
 </template>
 
-<script></school>
-<script></school>
+<script></script>
+<script></script>
