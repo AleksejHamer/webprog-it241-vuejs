@@ -1,7 +1,7 @@
 <template>
   <h1>Food</h1>
   <country/>
-  <Personal Profile/>
+  <Personal-Profile/>
  
   <comment-form/>
   <comment/>
